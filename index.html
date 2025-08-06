@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cubo Infinito Galáctico - Tienda Oficial</title>
-    <!-- La magia para el diseño moderno sin instalar NADA -->
+    <!-- TÍTULO NUEVO Y VICTORIOSO -->
+    <title>Sypnna - Potencial Ilimitado</title>
+    <!-- EL ESTANDARTE EN LA PESTAÑA DEL NAVEGADOR -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Novedad: Gradiente del fondo más intenso y galáctico */
         body {
-            background-color: #020617; /* Color base por si acaso */
+            background-color: #020617;
             background-image: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         }
     </style>
@@ -19,22 +20,24 @@
     <div class="min-h-screen flex flex-col items-center justify-center p-4">
         <div class="w-full max-w-5xl mx-auto text-center">
             
-            <!-- Header con título gradiente -->
             <header class="mb-12">
+                <!-- NUESTRO NUEVO LOGO -->
+                <img src="sypnna-logo.png" alt="Sypnna Logo" class="h-24 w-24 mx-auto mb-6">
+                
+                <!-- NUEVO GRITO DE GUERRA -->
                 <h1 class="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                    Cubo Infinito Galáctico
+                    Sypnna
                 </h1>
                 <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
-                    El universo en tus manos. El fidget toy definitivo para la concentración y la creatividad.
+                    Desata el potencial infinito de tu mente con nuestras herramientas de IA y productos para la neurodiversidad.
                 </p>
             </header>
 
-            <!-- Sección de Productos -->
+            <!-- Sección de Productos (mantenemos la estructura) -->
             <div id="product-section" class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Producto 1: Universe Cube -->
+                <!-- Producto 1 -->
                 <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 flex flex-col transition-transform duration-300 hover:scale-105">
-                    <!-- Placeholder para la imagen -->
                     <div class="w-full aspect-square bg-slate-700/50 rounded-lg mb-6 flex items-center justify-center">
                          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-5.197-5.975M15 21H9" /></svg>
                     </div>
@@ -50,7 +53,7 @@
                     </button>
                 </div>
 
-                <!-- Producto 2: Black Cube -->
+                <!-- Producto 2 -->
                 <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-500 flex flex-col shadow-lg shadow-purple-500/20 transition-transform duration-300 hover:scale-105">
                      <div class="w-full aspect-square bg-slate-700/50 rounded-lg mb-6 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
@@ -67,7 +70,7 @@
                     </button>
                 </div>
 
-                <!-- Producto 3: Blackwell Cube -->
+                <!-- Producto 3 -->
                 <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 flex flex-col transition-transform duration-300 hover:scale-105">
                      <div class="w-full aspect-square bg-slate-700/50 rounded-lg mb-6 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -86,7 +89,6 @@
 
             </div>
 
-            <!-- Novedad: Página de Compra (oculta por defecto) -->
             <div id="purchase-page" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center backdrop-blur-sm">
                 <div class="w-full max-w-md mx-auto text-center bg-slate-900 rounded-2xl p-8 border border-slate-700">
                     <h1 class="text-3xl font-bold mb-2 text-white">Confirmar Compra</h1>
@@ -106,7 +108,6 @@
         </div>
     </div>
     
-    <!-- JavaScript para manejar la interactividad -->
     <script>
         const productSection = document.getElementById('product-section');
         const purchasePage = document.getElementById('purchase-page');
@@ -114,17 +115,13 @@
         const productPriceSpan = document.getElementById('product-price');
 
         function showPurchasePage(name, price) {
-            // Actualiza los datos de la página de compra
             productNameSpan.textContent = name;
             productPriceSpan.textContent = price;
-            
-            // Oculta los productos y muestra la página de compra
             productSection.classList.add('hidden');
             purchasePage.classList.remove('hidden');
         }
 
         function hidePurchasePage() {
-            // Oculta la página de compra y muestra los productos
             purchasePage.classList.add('hidden');
             productSection.classList.remove('hidden');
         }
